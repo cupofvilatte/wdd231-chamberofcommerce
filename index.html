@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Home Page</title>
+    <meta name="description" content="this is the home page for the course website">
+    <meta name="author" content="Vilate Knapp">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/main-style.css">
+    <script type="module" src="./scripts/courseHomePage.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="headshot">
+            <img src="./images/viinpoland.jpg" alt="home page account profile image">
+            <h1>Vilate J. Knapp</h1>
+        </div>
+        <button class="wayfinder">&#9776;</button>
+        <nav class="header-nav">
+            <a class="home-link active" href="#">Home</a>
+            <a class="chamber-link" href="#">Chamber</a>
+            <a class="github-link" href="#">GitHub Profile</a>
+            <a class="linkedin-link" href="#">LinkedIn</a>
+        </nav>
+    </header>
+    <main>
+        <section id="course-work" class="home-page-section">
+            <div class="section-title">
+                <h2>Course Work</h2>
+            </div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section id="location" class="home-page-section">
+            <div class="section-title">
+                <h2>Rexburg, Idaho</h2>
+            </div>
+            <img src="./images/idahorainbow.jpeg" alt="image from the location">
+            <p>Dunes Double Rainbow</p>
+        </section>
+        <section id="education-plan" class="home-page-section">
+            <div class="section-title">
+                <h2>Web and Computer Programming Certificate</h2><p id="credits-remaining">Remaining Credits: </p>
+            </div>
+            <div id="course-categories">
+                <button>All</button>
+                <button>CSE</button>
+                <button>WDD</button>
+            </div>
+            <div id="course-tabs">
+                <!-- <button class="done">CSE 110</button>
+                <button class="done">WDD 130</button>
+                <button class="done">CSE 111</button>
+                <button>CSE 210</button>
+                <button class="done">WDD 131</button>
+                <button>WDD 231</button> -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy<span id="currentyear"></span> Vilate Knapp - Idaho United States</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
