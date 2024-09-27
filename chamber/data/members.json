@@ -1,0 +1,60 @@
+{
+    "companies": {
+        "Powder Keg": {
+            "address": "402 9th St",
+            "phoneNumber": "406-742-5180",
+            "website": "https://www.facebook.com/p/Powder-Keg-100049475063770/",
+            "imageFileName": "./images/powderKegLogo.jpeg",
+            "membershipLevel": 2
+        },
+        "Hurley's Oilfield Sources": {
+            "address": "303 Cass Ave",
+            "phoneNumber": "406-742-5312",
+            "website": "http://www.hurleyoilfieldservice.com",
+            "imageFileName": "./images/hurleysOilServiceLogo.png",
+            "membershipLevel": 3
+        },
+        "Double Barrel": {
+            "address": "401 S Ellery Ave",
+            "phoneNumber": "406-742-8110",
+            "website": "http://places.singleplatform.com/double-barrel-saloon/menu?ref=google",
+            "imageFileName": "./images/doubleBarrelLogo.png",
+            "membershipLevel": 1
+        },
+        "Hotel Albert": {
+            "address": "419 Ellery Ave",
+            "phoneNumber": "406-742-5164",
+            "website": "https://www.facebook.com/p/Hotel-Albert-100063579670959/",
+            "imageFileName": "./images/hotelAlbertLogo.webp",
+            "membershipLevel": 1
+        },
+        "Fairview Inn": {
+            "address": "318 Ellery Ave",
+            "phoneNumber": "406-742-5005",
+            "website": "https://www.tripadvisor.com/Hotel_Review-g45165-d8796645-Reviews-Fairview_Inn-Fairview_Montana.html",
+            "imageFileName": "./images/fairviewInnLogo.jpeg",
+            "membershipLevel": 1
+        },
+        "Neu's SuperValu": {
+            "address": "303 Ellery Ave",
+            "phoneNumber": "406-742-5441",
+            "website": "https://www.facebook.com/p/Neus-SuperValu-100063780874125/",
+            "imageFileName": "./images/neusSupervaluLogo.png",
+            "membershipLevel": 3
+        },
+        "Cherrey's Red Top Service": {
+            "address": "201 Ellery Ave",
+            "phoneNumber": "406-742-5030",
+            "website": "https://www.facebook.com/p/Cherreys-Red-Top-Service-100045208790169/?_rdr",
+            "imageFileName": "./images/redTopLogo.jpeg",
+            "membershipLevel": 1
+        },
+        "Waterhole #3": {
+            "address": "418 Ellery Ave",
+            "phoneNumber": "406-742-5224",
+            "website": "https://www.facebook.com/waterhole3mt/.",
+            "imageFileName": "./images/waterholeLogo.jpg",
+            "membershipLevel": 2
+        }
+    }
+}
