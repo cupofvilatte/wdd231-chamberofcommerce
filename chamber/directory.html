@@ -18,18 +18,23 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" href="./images/favicon-2.ico">
+
     <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="./styles/mainStyle.css">
     <link rel="stylesheet" href="./styles/directory.css">
-    <script src="#"></script>
+
+    <script src="./scripts/directory.js"></script>
 </head>
 <body>
     <header>
-        <div>
-            <img src="#" alt="Fairview Chamber of Commerce logo">
-            <h1>Fairview</h1>
-            <h2>Chamber of Commerce</h2>
+        <div class="header-info">
+            <img src="./images/favicon-2.ico" alt="Fairview Chamber of Commerce logo">
+            <div class="header-title">
+                <h1>Fairview</h1>
+                <h2>Chamber of Commerce</h2>
+            </div>
         </div>
-        <div>
+        <div class="header-nav">
             <nav>
                 <a href="#">Home</a>
                 <a href="#">Directory</a>
@@ -40,9 +45,17 @@
         </div>
     </header>
     <main>
+        <div class="button-container">
+            <button class="view-toggle-button" id="grid-view">GRID</button>
+            <button class="view-toggle-button" id="list-view">LIST</button>
+        </div>
         <section class="member-cards">
             <div class="card">
-
+                <img class="company-logo" src="#" alt="company image">
+                <p class="company-name">company name</p>
+                <p class="address">1122 Booger Booger Ave</p>
+                <p class="phone-number">555-555-5555</p>
+                <a class="company-page" href="#">theirSite.com</a>
             </div>
         </section>
     </main>
