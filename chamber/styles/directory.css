@@ -88,13 +88,13 @@ button:hover {
 }
 
 @media screen and (max-width:1000px) {
-    .member-cards {
+    .member-card.grid-view {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width:650px) {
-    .member-cards {
+    .member-cards.grid-view {
         grid-template-columns: 1fr;
     }
 }
