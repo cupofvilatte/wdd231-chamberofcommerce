@@ -21,6 +21,7 @@ header {
 
 .header-info {
     display: flex;
+    align-items: center;
     padding: 20px;
 }
 
@@ -28,7 +29,6 @@ header {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    align-self: center;
 }
 
 .header-title h1, .header-title h2 {
@@ -50,7 +50,7 @@ header {
 }
 
 .header-nav a:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     color: var(--primary-color);
 }
 
@@ -108,7 +108,7 @@ main {
 
 .member-cards.grid-view {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     font-family: var(--secondary-font);
 }
@@ -142,9 +142,6 @@ main {
     background-color: var(--backgound-color);
     align-items: center;
     border-radius: 10px;
-}
-
-.list-view .card p {
     padding: 10px;
 }
 
@@ -169,7 +166,7 @@ main {
 
 @media screen and (max-width:1000px) {
     .member-cards.grid-view {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
