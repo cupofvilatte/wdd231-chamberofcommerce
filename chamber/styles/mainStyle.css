@@ -10,6 +10,10 @@
 header {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    background-color: var(--backgound-color);
 }
 
 .header-info {
@@ -21,17 +25,54 @@ header {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    align-self: center;
 }
 
-.header-title {
-    display: grid;
-
+.header-title h1, .header-title h2 {
+    margin: 0;
+    margin-left: 5px;
 }
 
 .header-nav {
+    display: flex;
+    justify-content: space-around;
+}
 
+.header-nav a {
+    padding-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.header-nav a:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
 }
 
 footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    color: var(--secondary-color);
+    background-color: var(--backgound-color);
+    font-weight: bold;
+}
 
+footer div {
+    margin: 20px;
+}
+
+.chamber-info {
+    font-size: 0.5em;
+    font-family: var(--primary-font);
+}
+
+.socials {
+    font-size: 1em;
+}
+
+.personal-info {
+    font-size: 0.5em;
+    font-family: var(--primary-font);
 }

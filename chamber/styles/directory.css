@@ -34,12 +34,14 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+    font-family: var(--secondary-font);
 }
 
 .member-cards.list-view {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    font-family: var(--secondary-font);
 }
 
 .grid-view .card {

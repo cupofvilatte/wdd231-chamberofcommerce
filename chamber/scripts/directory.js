@@ -61,4 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
         memberCardsSection.classList.add('list-view');
         memberCardsSection.classList.remove('grid-view');
     })
+
+    const currentYear = new Date().getFullYear();
+    document.getElementById('currentyear').textContent = currentYear;
+
+    const lastModified = document.lastModified;
+    document.getElementById('lastModified').textContent = `Last Modified: ${lastModified}`;
 })
