@@ -7,6 +7,79 @@
     --secondary-font: Tahoma, Verdana;
 }
 
+/* main css */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    background-color: var(--backgound-color);
+    min-height: 80px;
+}
+
+.header-info {
+    display: flex;
+    padding: 20px;
+}
+
+.header-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.header-title h1, .header-title h2 {
+    margin: 0;
+    margin-left: 5px;
+}
+
+.header-nav {
+    display: inline-block;
+    text-align: right;
+    padding-right: 40px;
+}
+
+.header-nav a {
+    padding-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.header-nav a:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+footer {
+    contain: layout;
+    line-height: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    color: var(--secondary-color);
+    background-color: var(--backgound-color);
+    font-weight: bold;
+}
+
+footer div {
+    margin: 20px;
+}
+
+.chamber-info, .personal-info {
+    font-size: 0.5em;
+    font-family: var(--primary-font);
+}
+
+.socials {
+    font-size: 1em;
+}
+
+/* directory page */
+
 main {
     background-color: var(--primary-color);
     contain: layout;
