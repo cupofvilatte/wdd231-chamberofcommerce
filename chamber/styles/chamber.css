@@ -154,6 +154,7 @@ main {
 
 .company-logo {
     height: 100px;
+    width: 190px;
     padding: 5px;
     justify-content: center;
 }
