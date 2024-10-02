@@ -1,7 +1,8 @@
 :root {
     --primary-color: #2b2118;
     --secondary-color: #6f1a07;
-    --backgound-color: #f7f3e3; 
+    --backgound-color: #f7f3e3;
+    --grey: #999; 
 
     --primary-font: Trebuchet, Verdana;
     --secondary-font: Tahoma, Verdana;
