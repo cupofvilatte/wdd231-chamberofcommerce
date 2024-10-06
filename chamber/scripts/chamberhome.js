@@ -56,3 +56,43 @@ fetch(url)
         console.error('Problem with fetch operation:', error);
         weatherSection.innerHTML = `<p>Weather data cannot be loaded at this time.</p>`;
 });
+
+
+fetch('./data/members.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Filter for silver (2) and gold (3) membership levels
+        const filteredMembers = Object.entries(data.companies)
+            .filter(([_, companyData]) => companyData.membershipLevel === 2 || companyData.membershipLevel === 3);
+
+        // Shuffle the filtered members array and select 3 random companies
+        const randomCompanies = [];
+        while (randomCompanies.length < 3 && filteredMembers.length > 0) {
+            const randomIndex = Math.floor(Math.random() * filteredMembers.length);
+            randomCompanies.push(filteredMembers[randomIndex]);
+            filteredMembers.splice(randomIndex, 1); // Remove the selected company to avoid duplicates
+        }
+
+        // Display the selected companies
+        const spotlightsSection = document.querySelector('.spotlights');
+        randomCompanies.forEach(([name, companyData]) => {
+            const companyDiv = document.createElement('div');
+            companyDiv.classList.add('company');
+            companyDiv.innerHTML = `
+                <h3>${name}</h3>
+                <img src="${companyData.imageFileName}" alt="${name} Logo">
+                <p>Address: ${companyData.address}</p>
+                <p>Phone: ${companyData.phoneNumber}</p>
+                <p><a href="${companyData.website}" target="_blank">Visit Website</a></p>
+            `;
+            spotlightsSection.appendChild(companyDiv);
+        });
+    })
+    .catch(error => {
+        console.error('Problem with fetch operation:', error);
+    });
