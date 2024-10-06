@@ -49,6 +49,10 @@ main {
     font-family: var(--primary-font);
 }
 
+#join-now:hover {
+    padding: 25px 45px;
+}
+
 .current-events, .weather, .spotlights {
     padding: 20px;
     margin: 20px;
