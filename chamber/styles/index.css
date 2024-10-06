@@ -1,0 +1,74 @@
+:root {
+    --primary-color: #2b2118;
+    --secondary-color: #6f1a07;
+    --backgound-color: #f7f3e3;
+    --grey: #999; 
+    --black: #000;
+
+    --primary-font: Trebuchet, Verdana;
+    --secondary-font: Tahoma, Verdana;
+}
+
+body {
+    font-family: var(--secondary-font);
+    background-color: var(--backgound-color);
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+#join-now {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.current-events, .weather, .spotlights {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.current-events ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.current-events li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.weather h2, .weather h3 {
+    margin: 0;
+}
+
+.spotlights {
+    display: flex;
+    justify-content: space-between;
+}
+
+.company {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    text-align: center;
+}

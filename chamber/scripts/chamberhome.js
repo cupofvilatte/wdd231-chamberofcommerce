@@ -3,7 +3,7 @@ const apiKey = 'f97052b3b8a789b7348b4671b69928e9';
 const lat = 47.8563;
 const lon = -104.0447;
 
-const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
 fetch(url)
     .then(response => {
@@ -13,15 +13,44 @@ fetch(url)
         return response.json();
     })
     .then(data => {
-        const { main, weather, name } = data;
-        const temp = main.temp;
-        const description = weather[0].description;
+        console.log(data);
+        const forecastList = data.list;
+        const current = forecastList[0];
+        const temp = current.main.temp;
+        const description = current.weather[0].description;
 
         weatherSection.innerHTML = `
-            <h2>Weather in Fairview<h2>
-            <p>Temperature: ${temp} deg Celcius</p>
+            <h2>Weather in Fairview</h2>
+            <p>Temperature: ${temp}°C</p>
             <p>Condition: ${description}</p>
             `;
+
+        const days = {};
+        forecastList.forEach(item => {
+            const date = new Date(item.dt * 1000).toISOString().split('T')[0]; // Get the date (YYYY-MM-DD)
+            if (!days[date]) {
+                days[date] = { high: item.main.temp_max, low: item.main.temp_min };
+            } else {
+                days[date].high = Math.max(days[date].high, item.main.temp_max);
+                days[date].low = Math.min(days[date].low, item.main.temp_min);
+            }
+      });
+
+
+        let forecastHTML = `<h2>3-day Forecast</h2>`;
+        const dates = Object.keys(days);
+        for (let i =1; i <= 3 && i < dates.length; i++) {
+            const date = dates[i];
+            const { high, low } = days[date];
+
+            forecastHTML += `
+            <div>
+                <h3>${date}</h3>
+                <p>High: ${high}°C - Low: ${low}°C</p>
+            </div>
+            `;
+        }
+        weatherSection.innerHTML += forecastHTML;
     })
     .catch(error => {
         console.error('Problem with fetch operation:', error);
