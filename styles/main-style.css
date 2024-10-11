@@ -12,6 +12,17 @@
     --paragraph-font: "Gowun Batang";
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #headshot {
     display: flex;
     justify-content: center;
@@ -25,6 +36,10 @@
     width: 100px;
     margin: 20px;
     box-shadow: 5px 5px 5px var(--black);
+}
+
+#headshot h1 {
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .wayfinder {
@@ -132,6 +147,28 @@ button {
 #course-tabs .done {
     background-color: var(--secondary-color);
     color: var(--white);
+}
+
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
 footer {

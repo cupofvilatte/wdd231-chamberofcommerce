@@ -12,6 +12,7 @@ const lastModified = document.lastModified;
 document.getElementById('lastModified').textContent = `Last Update: ${lastModified}`;
 
 const courseTabs = document.getElementById('course-tabs');
+const courseDetails = document.getElementById('course-details');
 
 function renderCourses(filteredCourses) {
     courseTabs.innerHTML = '';
@@ -22,6 +23,10 @@ function renderCourses(filteredCourses) {
         if (course.completed) {
             courseButton.classList.add('done');
         }
+
+        courseButton.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
 
         courseTabs.appendChild(courseButton);
     });
@@ -76,3 +81,27 @@ totalCredits.textContent = `Total Credits: ${creditsInTotal}`;
 // Display remaining credits
 // const remainingCredits = calculateRemainingCredits();
 // creditsRemaining.textContent = `Remaining Credits: ${remainingCredits}`;
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id="closeModal">X</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificat</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+
+    courseDetails.showModal();
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
+
+course.Details.showModal();
+
+document.getElementById('closeModal').addEventListener('click', () => {
+    courseDetails.close();
+});
