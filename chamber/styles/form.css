@@ -1,0 +1,68 @@
+:root {
+    --primary-color: #2b2118;
+    --secondary-color: #6f1a07;
+    --backgound-color: #f7f3e3;
+    --grey: #999; 
+    --black: #000;
+
+    --primary-font: Trebuchet, Verdana;
+    --secondary-font: Tahoma, Verdana;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+form {
+    background-color: var(--primary-color);
+    color: var(--backgound-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+fieldset {
+    display: grid;
+    height: 80px;
+    background-color: transparent;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.membership-card {
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+    align-content: center;
+    height: 150px;
+    margin: 30px;
+    box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+#np-membership {
+    background-color: pink;
+}
+
+#bronze-membership {
+    background-color: #CE8946;
+}
+
+#silver-membership {
+    background-color: #c0c0c0;
+}
+
+#gold-membership {
+    background-color: #FFD700;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fairview Chamber of Commerce Home Page</title>
+
+    <meta name="description" content="this is the home page for the course website">
+    <meta name="author" content="Vilate Knapp">
+
+    <meta property="og:title" content="Fairview Chamber of Commerce Home Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/idahorainbow.jpeg">
+    <meta property="og:url" content="https://cupofvilatte.github.io/wdd231/">
+
+    <meta name="twitter:title" content="Fairview Chamber of Commerce Home Page">
+    <meta name="twitter:description" content="Main Page for Fairview Chamber of Commerce">
+    <meta name="twitter:image" content="./images/idahorainbow.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="./images/favicon-2.ico">
+
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="./styles/mainStyle.css">
+    <link rel="stylesheet" href="./styles/form.css">
+
+    <script src="./scripts/chamberhome.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-info">
+            <img src="./images/favicon-2.ico" alt="Fairview Chamber of Commerce logo">
+            <div class="header-title">
+                <h1>Fairview</h1>
+                <h2>Chamber of Commerce</h2>
+            </div>
+        </div>
+        <div class="header-nav">
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./directory.html">Directory</a>
+                <a href="#">Join</a>
+                <a href="#">Discover</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="form-section">
+            <form action="get">
+                <fieldset>
+                    <label for="first-name">First Name</label>
+                    <input type="text">
+                </fieldset>
+
+                <fieldset>
+                    <label for="last-name">Last Name</label>
+                    <input type="text">
+                </fieldset>
+
+                <fieldset>
+                    <label for="organizational-title">Organizational Title</label>
+                    <input type="text">
+                </fieldset>
+
+                <fieldset>
+                    <label for="email">Email Address</label>
+                    <input type="text">
+                </fieldset>
+
+                <fieldset>
+                    <label for="phone-number">Phone Number</label>
+                    <input type="text">
+                </fieldset>
+
+                <fieldset>
+                    <label for="business-name">Business/Organization Name</label>
+                    <input type="text">
+                </fieldset>
+
+                <fieldset>
+                    <label for="membership-level">Membership Level</label>
+                    <select name="membership-level" id="membership-level">
+                        <option value="non-profit">NP Membership (Non-Profit Only)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <label for="description">Description</label>
+                    <input type="text">
+                </fieldset>
+
+                <input id="timestamp" type="hidden">
+
+                <button type="submit">Join!</button>
+            </form>
+        </section>
+        <section id="card-section">
+            <div class="membership-card" id="np-membership">
+                <h3>Non-Profit Membership</h3>
+            </div>
+            <div class="membership-card" id="bronze-membership">
+                <h3>Bronze Membership</h3>
+            </div>
+            <div class="membership-card" id="silver-membership">
+                <h3>Silver Membership</h3>
+            </div>
+            <div class="membership-card" id="gold-membership">
+                <h3>Gold Membership</h3>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="chamber-info">
+            <h2>Fairview Chamber of Commerce</h2>
+            <p>14405 CR 355</p>
+            <p>Fairview, MT</p>
+            <p>FairviewChamber/gmail/org</p>
+            <p>555-555-5555</p>
+        </div>
+        <div class="socials">
+            <p>Stay tuned for Social Media updates!</p>
+        </div>
+        <div class="personal-info">
+            <h2>WDD231 Project</h2>
+            <p>Vilate Knapp</p>
+            <p>&copy;<span id="currentyear"></span> Fairview Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
