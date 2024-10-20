@@ -191,10 +191,23 @@ footer div {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     border: 3px solid var(--primary-color);
+    margin-bottom: 15px;
+    margin-top: 30px;
 }
 
 .local-photos img[loading="lazy"] {
     opacity: 1;
+}
+
+@media screen and (min-width: 951px) {
+    .local-photos img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .local-photos img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
 }
 
 @media screen and (max-width: 950px) {
