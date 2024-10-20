@@ -77,3 +77,8 @@ footer div {
 }
 
 /* Discover.HTML styling */
+
+.discover-content {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
