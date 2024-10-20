@@ -1,7 +1,7 @@
 :root {
     --primary-color: #2b2118;
     --secondary-color: #6f1a07;
-    --backgound-color: #f7f3e3; 
+    --backgound-color: #f7f3e3;
 
     --primary-font: Trebuchet, Verdana;
     --secondary-font: Tahoma, Verdana;
@@ -29,7 +29,8 @@ header {
     align-self: center;
 }
 
-.header-title h1, .header-title h2 {
+.header-title h1,
+.header-title h2 {
     margin: 0;
     margin-left: 5px;
 }
@@ -67,7 +68,8 @@ footer div {
     margin: 20px;
 }
 
-.chamber-info, .personal-info {
+.chamber-info,
+.personal-info {
     font-size: 0.5em;
     font-family: var(--primary-font);
 }
@@ -81,4 +83,63 @@ footer div {
 .discover-content {
     display: grid;
     grid-template-columns: 2fr 3fr;
+    max-width: 100%;
+}
+
+.sidebar {
+    flex: 1;
+    overflow: auto;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#fundraiser {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#fundraiser h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#fundraiser-bar {
+    width: 90%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 30px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: var(--secondary-color);
+    /* Green bar for progress */
+    width: 0%;
+    /* Default width is 0, JavaScript will update it */
+    border-radius: 10px 0 0 10px;
+    transition: width 1s ease-in-out;
+    /* Smooth animation */
+}
+
+#fundraiser-percentage {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    color: var(--secondary-color);
+    /* Match the percentage text with the progress bar color */
+}
+
+.local-photos img {
+    width: 100%;
+    border: 3px solid var(--primary-color);
 }
