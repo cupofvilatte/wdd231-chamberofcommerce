@@ -92,7 +92,16 @@ footer div {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+    overflow-y: auto;
+    max-height: 100vh;
 }
+
+.sidebar div {
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 10px;
+}
+
 
 #fundraiser {
     width: 80%;
@@ -112,11 +121,13 @@ footer div {
 }
 
 #fundraiser-bar {
-    width: 90%;
+    width: 100%;
     background-color: #e0e0e0;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
     height: 30px;
+    margin: 0;
+    padding: 0;
     margin-bottom: 15px;
     position: relative;
 }
@@ -128,8 +139,6 @@ footer div {
     width: 0%;
     /* Default width is 0, JavaScript will update it */
     border-radius: 10px 0 0 10px;
-    transition: width 1s ease-in-out;
-    /* Smooth animation */
 }
 
 #fundraiser-percentage {
@@ -137,6 +146,11 @@ footer div {
     margin-top: 10px;
     color: var(--secondary-color);
     /* Match the percentage text with the progress bar color */
+}
+
+.local-photos {
+    overflow-y: auto;
+    max-height: 100vh;
 }
 
 .local-photos img {
