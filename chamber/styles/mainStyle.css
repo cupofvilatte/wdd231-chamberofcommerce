@@ -7,6 +7,10 @@
     --secondary-font: Tahoma, Verdana;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -89,7 +93,6 @@ footer div {
 .sidebar {
     flex: 1;
     overflow: auto;
-    width: 100%;
     padding: 10px;
     box-sizing: border-box;
     overflow-y: auto;
@@ -100,11 +103,12 @@ footer div {
     border: 2px solid var(--primary-color);
     border-radius: 20px;
     padding: 10px;
+    margin-bottom: 5px;
 }
 
 
 #fundraiser {
-    width: 80%;
+    width: 100%;
     max-width: 500px;
     margin: 20px auto;
     text-align: center;
@@ -128,16 +132,12 @@ footer div {
     height: 30px;
     margin: 0;
     padding: 0;
-    margin-bottom: 15px;
-    position: relative;
 }
 
 #progress-bar {
     height: 100%;
     background-color: var(--secondary-color);
-    /* Green bar for progress */
-    width: 0%;
-    /* Default width is 0, JavaScript will update it */
+    width: 0%; /* Default width is 0, JavaScript will update it */
     border-radius: 10px 0 0 10px;
 }
 
@@ -145,7 +145,6 @@ footer div {
     font-size: 1.4rem;
     margin-top: 10px;
     color: var(--secondary-color);
-    /* Match the percentage text with the progress bar color */
 }
 
 .local-photos {
