@@ -96,15 +96,3 @@ const fundraiserGoal = 10000; // Example: Target amount
     percentageText.textContent = Math.floor(progressPercentage) + "%"; // Update the percentage text
 
 
-// sidebar scrolling
-
-const sidebar = document.querySelector('.sidebar');
-const images = document.querySelector('.local-photos');
-
-    // sidebar.addEventListener('scroll', () => {
-    //     images.scrollTop = sidebar.scrollTop; // Sync scroll
-    // });
-
-    // images.addEventListener('scroll', () => {
-    //     sidebar.scrollTop = images.scrollTop; // Sync scroll
-    // });
